@@ -37,7 +37,7 @@ def ques_stat(username):
     json_data = {
         'query': '\n    query recentAcSubmissions($username: String!, $limit: Int!) {\n  recentAcSubmissionList(username: $username, limit: $limit) {\n    id\n    title\n    titleSlug\n    timestamp\n  }\n}\n    ',
         'variables': {
-            'username': 'shyamalp16',
+            'username': f'{username}',
             'limit': 15,
         },
     }
